@@ -1,0 +1,53 @@
+
+Hi,
+
+1. First Build JAR for existing project...
+   
+            mvn test / mvn clean package
+
+2. Then install it to maven repo
+
+        mvn install:install-file -Dfile=C:\techm_workspace\Mip15\target\Mip15-1.0.jar -DpomFile=C:\techm_workspace\Mip15\pom.xml
+
+Jar file + POM file
+
+3. Add  dependencies in project you want to use JARS 
+
+i.e. // Do not provide scope attribute. 
+
+ <dependency>
+        <groupId>com.kpn.tie</groupId>
+        <artifactId>Mip16</artifactId>
+        <version>1.0</version>
+    </dependency> 
+
+
+	
+	=========================
+	
+	Git commands
+	
+		git init         // creates a new subdirectory named .git that contains all of your necessary repository files
+		git add .  	// Add files to git 
+		git commit -m "Commited changes" //commit changes with message
+		
+		
+		git clone git_url //That creates a directory named libgit2, initializes a .gi
+		
+		git clone git_url new_name/rename 
+	
+//change remote origin url
+	
+		git remote set-url origin git://new.url.here
+		
+		git remote add origin https://github.com/akashpatel236/SpringBootDemo.git
+		
+		i.e. git remote set-url origin https://github.com/akashpatel236/myProject.git
+		
+		git remote set-url origin https://github.com/akashpatel236/SpringBootDemo.git
+		
+git push -u origin master
+
+
+
+

@@ -1,0 +1,64 @@
+
+Each project has a single pom.xml file, and each pom.xml file has a project element and three mandatory fields: groupId, artifactId, and version. Notice that Maven has already added JUnit as the test framework. The following table describes what each node does:
+
+Node	Description
+project	Top-level element in all Maven pom.xml files
+modelVersion	Object model version that this POM is using
+groupId	Project groupId (for example, com.example.bank)
+artifactId	Project ID (for example, OracleBanking)
+packaging	Project files converted into a JAR file
+version	Project version used in the artifact's repository to separate each version (for example, 1.0-SNAPSHOT)
+name	Project display name
+url	Location of the project site 
+
+
+Create project : 
+
+mvn archetype:generate -DgroupId=com.example.bank -DartifactId=OracleBanking -DarchetypeArtifactId=maven-archetype-quickstart  -DinteractiveMode=false
+
+Creating manifest with maven 
+
+Edit the pom.xml file:
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.example.bank.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>     
+
+Testing the Application
+
+mvn test
+
+Building the Application
+
+
+
+Clean and package the files, plug-ins, and libraries before running the application:
+
+mvn clean package
+
+
+Packaging and Running the Application
+
+Navigate to the directory where you installed Maven, and open the settings.xml file.
+
+Use the Maven Local repository to run your Java SE Maven application:
+
+mvn exec:java -Dexec.mainClass="com.example.bank.App" -s "*****location of settings.xml file.********"
+
+
+Review the output.
+
+C:\tieworkspace\OracleBanking\target : java -jar OracleBanking-1.0-SNAPSHOT.jar
+

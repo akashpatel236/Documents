@@ -1,0 +1,23 @@
+
+
+
+C:\Windows\system32>heroku login
+ !    heroku-cli: update available from 6.15.5-1f03166 to 6.99.0-ec9edad
+Enter your Heroku credentials:
+Email: akashpatel236@gmail.com
+Password: *********
+ !    ETIMEDOUT: connect ETIMEDOUT 52.4.118.110:443
+ 
+ 
+
+set HTTP_PROXY=http://patel512:qsawzx_236@ccaintra.kpnnl.local:8080
+
+set HTTPS_PROXY=http://patel512:qsawzx_236@ccaintra.kpnnl.local:8080
+
+heroku login
+
+akashpatel236@gmail.com
+
+git clone https://github.com/heroku/java-getting-started.git
+
+

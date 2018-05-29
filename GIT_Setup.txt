@@ -1,0 +1,24 @@
+
+
+GIT Setup :
+
+1.	In GIT Bash. Run below command.
+
+git config --system core.longpaths true
+
+2.	Add gitkpn Certificate in Java Keystore. File is present at share location “\\VDIT7P03524\Users\visha500\Document”
+
+keytool -importcert -file "C:\gitkpnorg.crt" -keystore "C:\Program Files\Java\jdk1.7.0_80\jre\lib\security\cacerts" -alias "gitkpnorg"
+
+
+GIT URL:
+https://git.kpn.org/login?next=/projects/TIE/repos/tie_repository/
+
+GIT URL to use in Eclipse to Access GIT Repository Remotely:
+https://git.kpn.org/scm/tie/tie_repository.git
+
+
+C:\git\tie_repository\applications\client\gateway\gateway-web\src\java\com\kpn\tie\gateway\ws\wes\form\SDFBackhaulDFForm.java
+
+
+

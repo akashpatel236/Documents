@@ -1,0 +1,86 @@
+eclipse:
+
+install software ->  http://download.eclipse.org/m2e 
+
+proxy set in conf/setting.xml - > in apache-maven folder and user/.m2/setting.xml
+
+Maven Commands: 
+
+# To create project thorugh cmd 
+
+mvn archetype:generate
+
+#Maven project Creation
+
+mvn archetype:generate -DgroupId=com.tie -DartifactId=TiePOC -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+	
+
+mvn archetype:generate -DgroupId=com.mkyong -DartifactId=NumberGenerator -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+	
+#To import project in eclipse
+ 
+mvn eclipse:eclipse
+
+When you  change something in pom.xml then go to cmd and then again execute mvn eclipse:eclispe command to download other dependecies ...
+
+# Execute Project
+
+java -cp target/TiePOC-1.0-SNAPSHOT.jar com.tie.App
+
+$ java -cp target/NumberGenerator-1.0-SNAPSHOT.jar com.mkyong.App
+Unique ID : f1947107-2deb-4926-a635-ea3db61453e8
+
+$ java -cp target/NumberGenerator-1.0-SNAPSHOT.jar com.mkyong.App
+Unique ID : 98ed9e1c-d1bc-47f1-847d-64db451ce0ff
+
+	
+# External jar
+	
+	
+	 mvn install:install-file -Dfile=<path-to-file> \
+    -DgroupId=<group-id> -DartifactId=<artifact-id> \
+    -Dversion=<version> -Dpackaging=<packaging>
+	
+	i.e. 
+	
+	mvn install:install-file -Dfile=C:\tieworkspace\OracleBanking\target\OracleBanking-1.0-SNAPSHOT.jar -DgroupId=com.example.bank -DartifactId=OracleBanking -Dversion=1.0 -Dpackaging=jar
+	
+	e.bank -DartifactId=OracleBanking -Dversion=1.0-SNAPSHOT -Dpackaging=jar
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building OracleBanking 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install-file (default-cli) @ OracleBanking ---
+[INFO] Installing C:\tieworkspace\OracleBanking\target\OracleBanking-1.0-SNAPSHOT.jar to C:\Users\patel512\.m2\repository\com\example\bank\OracleBanki
+ng\1.0-SNAPSHOT\OracleBanking-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.197 s
+[INFO] Finished at: 2018-05-18T17:43:54+05:30
+[INFO] Final Memory: 5M/15M
+	
+	<dependencies>
+  <dependency>
+    <groupId>com.example.bank</groupId>
+    <artifactId>OracleBanking</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </dependency>
+</dependencies>
+	
+	java -jar target/TiePOC-1.0-SNAPSHOT.jar
+	
+	java -version
+	
+	javac -version
+	
+	
+	
+	
+	
+	
+	
+	
+	
